@@ -1,0 +1,1174 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="grids.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="MYJAVASCRIPT.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="jquery.js"></script>
+    <script>
+      $(function () {
+        $("#button1").click(function () {
+          $("#topmenu ul").slideToggle();
+          $("#cats").css("right", "-300px");
+        });
+
+        $("#button2").click(function () {
+          if ($("#cats").css("right") == "-300px") {
+            $("#cats").css("right", "0");
+            $("#topmenu ul").slideUp();
+          } else {
+            $("#cats").css("right", "-300px");
+          }
+        });
+
+        $("#cats .plus").click(function (event) {
+          $(this).parent().siblings("ul").slideToggle();
+          event.preventDefault();
+        });
+
+        $(window).resize(function () {
+          if ($("#cats").css("width") != "300px") {
+            $("#cats .submenu").slideUp();
+          }
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="topmenu">
+      <nav class="wrapper">
+        <ul id="ulDisplay">
+          <li><a href=""> خانه </a></li>
+          <li><a href=""> درباره ما </a></li>
+          <li><a href=""> تماس با ما </a></li>
+          <li><a href=""> ورود </a></li>
+          <li><a href=""> عضویت </a></li>
+        </ul>
+      </nav>
+      <img src="images/menu.png" alt="" id="button1" />
+      <img src="images/menu.png" alt="" id="button2" />
+    </div>
+    <header id="header">
+      <div class="wrapper">
+        <div class="row">
+          <div id="logo" class="col-xs-12 col-sm-4">
+            <img src="images/logo.png" width="140" height="140" />
+          </div>
+          <div id="search" class="col-xs-12 col-sm-8">
+            <h1>فروشگاه آنلاین</h1>
+            <form>
+              <input
+                type="search"
+                name="search"
+                placeholder="کالای مورد نظرتان را جستجو کنید"
+              />
+              <input type="submit" value="جستجو" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav id="cats">
+      <ul>
+        <li class="item">
+          <a href="#">کالای دیجیتال<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">موبایل<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">Apple</a></li>
+                <li class="subitem"><a href="#">Samsung</a></li>
+                <li class="subitem"><a href="#">LG</a></li>
+                <li class="subitem"><a href="#">HTC</a></li>
+                <li class="subitem"><a href="#">Sony</a></li>
+                <li class="subitem"><a href="#">Huawei</a></li>
+                <li class="subitem"><a href="#">Alcatel</a></li>
+                <li class="subitem"><a href="#">ASUS</a></li>
+                <li class="subitem"><a href="#">Lenovo</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">تبلت و کتابخوان<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">Apple</a></li>
+                <li class="subitem"><a href="#">Samsung</a></li>
+                <li class="subitem"><a href="#">LG</a></li>
+                <li class="subitem"><a href="#">HTC</a></li>
+                <li class="subitem"><a href="#">Sony</a></li>
+                <li class="subitem"><a href="#">Huawei</a></li>
+                <li class="subitem"><a href="#">Alcatel</a></li>
+                <li class="subitem"><a href="#">ASUS</a></li>
+                <li class="subitem"><a href="#">Lenovo</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لپ تاپ<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">Apple</a></li>
+                <li class="subitem"><a href="#">Samsung</a></li>
+                <li class="subitem"><a href="#">LG</a></li>
+                <li class="subitem"><a href="#">HTC</a></li>
+                <li class="subitem"><a href="#">Sony</a></li>
+                <li class="subitem"><a href="#">Huawei</a></li>
+                <li class="subitem"><a href="#">Alcatel</a></li>
+                <li class="subitem"><a href="#">ASUS</a></li>
+                <li class="subitem"><a href="#">Lenovo</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">دوربین<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">Canon</a></li>
+                <li class="subitem"><a href="#">Nikon</a></li>
+                <li class="subitem"><a href="#">Fujifilm</a></li>
+                <li class="subitem"><a href="#">Sony</a></li>
+                <li class="subitem"><a href="#">Samsung</a></li>
+                <li class="subitem"><a href="#">Casio</a></li>
+                <li class="subitem"><a href="#">Olympus</a></li>
+                <li class="subitem"><a href="#">GoPro</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">کامپیوتر و لوازم جانبی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">ماشین های اداری<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">Panasonic</a></li>
+                <li class="subitem"><a href="#">AEG</a></li>
+                <li class="subitem"><a href="#">Gigaset</a></li>
+                <li class="subitem"><a href="#">Epson</a></li>
+                <li class="subitem"><a href="#">HP</a></li>
+                <li class="subitem"><a href="#">Canon</a></li>
+                <li class="subitem"><a href="#">Samsung</a></li>
+                <li class="subitem"><a href="#">Brother</a></li>
+                <li class="subitem"><a href="#">Bixolon</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">لوازم خانگی<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">صوتی و تصویری<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم برقی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">آشپزخانه<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">سرو و پذیرایی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">دکوراتیو<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">فرش<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">زیبایی و سلامت<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">عطر<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم آرایشی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم بهداشتی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم شخصی برقی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">ساعت<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">عینک آفتابی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">فرهنگ و هنر<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">کتاب و مجلات<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم التحریر<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">صنایع دستی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">فرش<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">آلات موسیقی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">فیلم<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">ورزش و سرگرمی<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">پوشاک ورزشی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">کفش ورزشی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم ورزشی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">دوچرخه و لوازم جانبی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">تجهیزات سفر<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">مادر و کودک<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">ایمنی و مراقبت<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">غذاخوری<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم شخصی<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">بهداشت و حمام<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">گردش و سفر<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a href="#">خودرو و لوازم<span class="plus">+</span></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="#">خودرو<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم جانبی خودرو<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+            <li class="subitem">
+              <a href="#">لوازم مصرفی خودرو<span class="plus">+</span></a>
+              <ul class="submenu">
+                <li class="subitem"><a href="#">مادربرد</a></li>
+                <li class="subitem"><a href="#">پردازنده</a></li>
+                <li class="subitem"><a href="#">کارت گرافیک</a></li>
+                <li class="subitem"><a href="#">نمایشگر</a></li>
+                <li class="subitem"><a href="#">هارد دیسک</a></li>
+                <li class="subitem"><a href="#">رم کامپیوتر</a></li>
+                <li class="subitem"><a href="#">منبع تغذیه</a></li>
+                <li class="subitem"><a href="#">کیس کامپیوتر</a></li>
+                <li class="subitem"><a href="#">اسپیکر</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="wrapper">
+      <div class="row">
+        <div id="content" class="col-xs-12 col-lg-9">
+          <section class="group row">
+            <h2>پرفروش ها</h2>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p22.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p21.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>عینک آفتابی ری بن مدل 8352-6221-83</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p2.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>
+                    هاردديسک اينترنال وسترن ديجيتال سري آبي مدل WD10EZEX ظرفيت 1
+                    ترابايت
+                  </h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p23.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p22.jpg" alt="" />
+                    <span class="imagelable">پرفروش ها</span>
+                  </div>
+                  <h3>عينک آفتابي کومونو سري Alex مدل Black Green</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+          </section>
+          <section class="group row">
+            <h2>جدیدترین ها</h2>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p18.jpg" alt="" />
+                    <span class="imagelable">جدید </span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000 تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p22.jpg" alt="" />
+                    <span class="imagelable">جدید </span>
+                  </div>
+                  <h3>عینک آفتابی ری بن مدل 8352-6221-83</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable"> جدید</span>
+                  </div>
+                  <h3>
+                    هاردديسک اينترنال وسترن ديجيتال سري آبي مدل WD10EZEX ظرفيت 1
+                    ترابايت
+                  </h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">جدید</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">جدید</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable"> جدید</span>
+                  </div>
+                  <h3>عينک آفتابي کومونو سري Alex مدل Black Green</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p18.jpg" alt="" />
+                    <span class="imagelable">جدید </span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000 تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p22.jpg" alt="" />
+                    <span class="imagelable">جدید </span>
+                  </div>
+                  <h3>عینک آفتابی ری بن مدل 8352-6221-83</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable"> جدید</span>
+                  </div>
+                  <h3>
+                    هاردديسک اينترنال وسترن ديجيتال سري آبي مدل WD10EZEX ظرفيت 1
+                    ترابايت
+                  </h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">جدید</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <article>
+                <a href="">
+                  <div class="image">
+                    <img src="images/p1.jpg" alt="" />
+                    <span class="imagelable">جدید</span>
+                  </div>
+                  <h3>لپ تاپ 15 اینچی ایسوس مدل ROG GL502VS - B</h3>
+                  <p class="rate">
+                    <span class="ratestarbox">
+                      <img src="images/star.png" alt="" class="star" />3.6
+                    </span>
+                    <span> از 60 رای </span>
+                  </p>
+                  <p class="price">350000تومان</p>
+                </a>
+                <a href="" class="buy">افزودن به سبد خرید</a>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <aside id="sidebar" class="col-xs-12 col-lg-3">
+          <section class="group row">
+            <h3>تخفیف ویژه</h3>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p12.jpg" alt="" />
+                  <span class="offlable">تخفیف ویژه</span>
+                  <span class="offconst">50%</span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                    <p class="price">50000&nbsp;تومان</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p13.jpg" alt="" />
+                  <span class="offlable">تخفیف ویژه</span>
+                  <span class="offconst">50%</span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                    <p class="price">50000&nbsp;تومان</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p14.jpg" alt="" />
+                  <span class="offlable">تخفیف ویژه</span>
+                  <span class="offconst">50%</span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                    <p class="price">50000&nbsp;تومان</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="group row">
+            <h3>تبلیغات</h3>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p12.jpg" alt="" />
+                  <span class="offlable">تبلیغات </span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p13.jpg" alt="" />
+                  <span class="offlable">تبلیغات</span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p12.jpg" alt="" />
+                  <span class="offlable">تبلیغات </span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-12">
+              <article>
+                <div class="image">
+                  <img src="images/p14.jpg" alt="" />
+                  <span class="offlable">تبلیغات</span>
+                  <div class="popup">
+                    <h3>لپ تاپ 15 اینچی ایسوس مدل N552VW - I</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div id="contact">
+        <div class="wrapper">
+          <ul>
+            <li>7 روز هفته و 24 ساعته پاسخگوی شما هستیم</li>
+            <li class="email">
+              <img src="images/mail.png" alt="" /> contact@domain.com
+            </li>
+            <li class="phonenumber">
+              <img src="images/phone.png" alt="" /> 021 - 44444444
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="aboutus">
+        <div class="wrapper row">
+          <div class="col-xs-12 col-md-4 about">
+            <h3>درباره فروشگاه</h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <ul class="col-xs-6 col-md-3">
+              <h3>اطلاعات</h3>
+              <li>درباره ما</li>
+              <li>حریم خصوصی</li>
+              <li>شرایط و قوانین</li>
+            </ul>
+            <ul class="col-xs-6 col-md-3">
+              <h3>خدمات مشتریان</h3>
+              <li>تماس ما</li>
+              <li>بازگشت</li>
+              <li>نقشه سایت</li>
+            </ul>
+            <ul class="col-xs-6 col-md-3">
+              <h3>امکانات جانبی</h3>
+              <li>کارت هدیه</li>
+              <li>کد تخفیف</li>
+              <li>بازاریابی</li>
+            </ul>
+            <ul class="col-xs-6 col-md-3">
+              <h3>حساب من</h3>
+              <li>حساب کاربری</li>
+              <li>پیگیری سفارش</li>
+              <li>خبرنامه</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        <div class="wrapper row">
+          <p class="col-xs-12 col-md-6">کلیه حقوق مادی و معنوی این سایت متعلق به <strong>فروشگاه آنلاین</strong> است.</p>
+          <ul class="col-xs-12 col-md-6">
+            <li><img src="images/facebook.png" alt=""></li>
+            <li><img src="images/instagram.png" alt=""></li>
+            <li><img src=" images/gplus.png" alt=""></li>
+            <li><img src="images/twitter.png" alt=""></li>
+            <li><img src="images/linkedin.png" alt=""></li>
+            <li><img src="images/youtube.png" alt=""></li>
+            <li><img src="images/rss.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
